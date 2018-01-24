@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery Functions 1</title>
+    <style>
+    .red-square{
+        width: 200px;
+        height: 200px;
+        border: 2px solid red;
+        margin-bottom: 5px;
+    }   
+    #green-circle {
+        border-radius: 50%;
+        border: 2px solid green;
+	    width: 200px;
+	    height: 200px; 
+    }
+    .doubleWidth {
+        width: 400px;
+        /* height: 400px; */
+    }
+    </style>
+</head>
+<body>
+
+    <div class="red-square"></div>
+    <div class="red-square"></div>
+    <p>This is a paragraph of text!</p>
+    <div id="green-circle"></div>
+
+    <button id="show">Show</button>
+    <button id="hide">Hide</button>
+    <button id="toggle">Toggle</button>
+    
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.min.js"></script>
+    <script>
+        $('#green-circle').click(function(){
+            $("p").html("We've changed the text!");
+        });
+        $('p').hover(function(){
+            $('p').html("Hover changed me!");
+        });
+        // $('.red-square').click(function(){
+        //     $(this).css('background-color', 'blue');
+        // });
+
+        // https://api.jquery.com/mouseover/
+        $('.red-square').first().mouseover(function(){
+            // $(this).css('width', '400px');
+            console.log("Hovering over a red square");
+            // $(this).addClass('doubleWidth');
+            $(this).toggleClass('doubleWidth');
+        });
+
+        // Show and Hide Functions for the red-square
+        // http://api.jquery.com/category/effects/basics/
+        $('#show').click(function(){
+            $(".red-square").show("normal");
+        });
+        $("#hide").click(function() {
+                $(".red-square").hide(1000, "swing");
+        });
+        $("#toggle").click(function() {
+                $(".red-square").toggle('slow',completionCallBack);
+        });
+
+        function completionCallBack() {
+            $(this).text("Animation Complete");
+        }
+    </script>
+</body>
+</html>

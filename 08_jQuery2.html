@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Two Red Squares and One Green Circle</title>
+    <style>
+    .red-square{
+        width: 200px;
+        height: 200px;
+        border: 2px solid red;
+        margin-bottom: 5px;
+    }
+    #green-circle {
+        border-radius: 50%;
+        border: 2px solid green;
+	    width: 200px;
+	    height: 200px; 
+    }
+    </style>
+</head>
+<body>
+
+    <!-- <div class="red-square"></div>
+    <div class="red-square"></div> -->
+    <p>This is a paragraph of text!</p>
+    <div id="green-circle"></div>
+    
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.min.js"></script>
+    <script>
+        $('#green-circle').click(function(){
+            $("p").html("We've changed the text!");
+        });
+        $('p').hover(function(){
+            $('p').html("Hover changed me!");
+        });
+    </script>
+</body>
+</html>
