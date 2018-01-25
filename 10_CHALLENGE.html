@@ -39,6 +39,20 @@
             $(this).css('background-color', 'blue');
         });
 
+        
+
+        var a = $('.red-square').click(test(this));
+
+        function test(redSquare) {
+            console.log("I am called")
+            $(redSquare).css('background-color', 'blue');
+
+        }
+        console.log(a);
+
+
+
+
         /*
             Challenge: Change the width of the squares to 400px after the user hovers on them
         */
