@@ -6,7 +6,7 @@ if(num < 50) {
 
 
 //or....
-num = 60;
+num = 40;
 if(num < 50) {
     console.log("Less than half");
 }

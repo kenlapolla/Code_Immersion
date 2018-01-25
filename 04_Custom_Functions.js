@@ -12,10 +12,13 @@ function greeting2() {
 greeting2();
 
 //Pass a variable 
+var a = "Sharif";
+
 function greeting3(name) {
     console.log("Hello " + name);
 }
-
+greeting3(a);
+// console.log(name);
 greeting3(myClass); //Notice how we re-use the variable
 
 //Pass multiple arguments
